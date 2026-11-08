@@ -1,0 +1,4 @@
+{
+  "functions": { "api/news.js": { "maxDuration": 10 } },
+  "rewrites": [{ "source": "/api/news", "destination": "/api/news.js" }]
+}
