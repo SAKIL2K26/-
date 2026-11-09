@@ -1,4 +1,13 @@
 {
-  "functions": { "api/news.js": { "maxDuration": 10 } },
-  "rewrites": [{ "source": "/api/news", "destination": "/api/news.js" }]
+  "functions": {
+    "api/news.js": { "maxDuration": 10 },
+    "api/archive.js": { "maxDuration": 10 }
+  },
+  "rewrites": [
+    { "source": "/api/news", "destination": "/api/news.js" },
+    { "source": "/api/archive", "destination": "/api/archive.js" }
+  ],
+  "crons": [
+    { "path": "/api/news", "schedule": "0 0 * * *" }
+  ]
 }
